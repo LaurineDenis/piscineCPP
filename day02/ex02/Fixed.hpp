@@ -27,20 +27,20 @@ class Fixed
 		bool				operator>(const Fixed &rhs) const;
 		bool				operator>=(const Fixed &rhs) const;
 
-		void				operator+=(const Fixed &rhs);			//ShortSum
-		void				operator-=(const Fixed &rhs);			//ShortSub
-		void				operator/=(const Fixed &rhs);			//ShortDivison
-		void				operator*=(const Fixed &rhs);			//ShortMultiplication
+		void				operator+=(const Fixed &rhs);
+		void				operator-=(const Fixed &rhs);
+		void				operator/=(const Fixed &rhs);
+		void				operator*=(const Fixed &rhs);
 
-		Fixed				operator+(const Fixed &rhs) const;		//Sum
-		Fixed				operator-(const Fixed &rhs) const;		//Sub
-		Fixed				operator/(const Fixed &rhs) const;		//Division
-		Fixed				operator*(const Fixed &rhs) const;		//Multiplication
+		Fixed				operator+(const Fixed &rhs) const;
+		Fixed				operator-(const Fixed &rhs) const;
+		Fixed				operator/(const Fixed &rhs) const;
+		Fixed				operator*(const Fixed &rhs) const;
 		
-		Fixed				&operator++(void);							//Pre-Increment
-		Fixed				&operator--(void);							//Pre-Decrement
-		Fixed				operator++(int);						//Post-Increment
-		Fixed				operator--(int);						//Post-Decrement
+		Fixed				&operator++(void);
+		Fixed				&operator--(void);
+		Fixed				operator++(int);
+		Fixed				operator--(int);
 
 		//Methods Not Member Overload
 		static Fixed				&min(Fixed &a, Fixed &b);
