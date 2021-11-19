@@ -57,7 +57,7 @@ void	print_annuaire(Contact annuaire[8], int nb_contact)
 		else
 			std::cout << str.substr(0, 10 - annuaire[i].get_last_name().size()) << annuaire[i].get_last_name() << "|";
 		if (annuaire[i].get_nickname().size() > 10)
-			std::cout << annuaire[i].get_nickname().substr(0, 9) << ".|";
+			std::cout << annuaire[i].get_nickname().substr(0, 9) << ".|" << std::endl;
 		else
 			std::cout << str.substr(0, 10 - annuaire[i].get_nickname().size()) << annuaire[i].get_nickname() << "|" <<std::endl;
 		i++;

@@ -17,8 +17,8 @@ class Fixed
 
 	private :
 
-	int					_raw;
-	static const int	_bits_raw;
+	int					m_rawBits;
+	static const int	m_fractionnalBits;
 };
 
 #endif

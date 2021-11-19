@@ -13,7 +13,7 @@ int main(int ac, char **av)
 			i = 0;
 			while (av[j][i])
 			{
-				std::cout << toupper(av[j][i]);
+				std::cout << (char)toupper(av[j][i]);
 				i++;
 			}
 			j++;
