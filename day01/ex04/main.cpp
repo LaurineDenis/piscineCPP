@@ -6,7 +6,6 @@ int	main(int ac, char **av)
 	if (ac == 4)
 	{
 		std::ifstream	in_file(av[1]);
-
 		if (in_file.is_open())
 		{
 			std::string		tmp = av[1];
@@ -20,29 +19,34 @@ int	main(int ac, char **av)
 			{
 				pos = 0;
 				tmp2 = "";
-				while ((new_pos = tmp.find(to_remplace)) != std::string::npos)
-				{
-					if (pos == 0)
-						tmp2 = tmp.substr(pos, new_pos) + to_fill + tmp.substr(new_pos + to_remplace.size(), tmp.size());
-					else
-						tmp2 = tmp2.substr(0, new_pos) + to_fill + tmp2.substr(new_pos + to_remplace.size(), tmp2.size());
-					pos = 1;
-					tmp = tmp2;
-				}
-				if (out_file.is_open())
-				{
-					if (pos == 0)
-						out_file << tmp << '\n';
-					else
-						out_file << tmp2 << '\n';
-				}
+				if (to_remplace == to_fill)
+					out_file << tmp << '\n';
 				else
-					std::cout << "problem" << std::endl;
+				{
+					while ((new_pos = tmp.find(to_remplace)) != std::string::npos)
+					{
+						if (pos == 0)
+							tmp2 = tmp.substr(pos, new_pos) + to_fill + tmp.substr(new_pos + to_remplace.size(), tmp.size());
+						else
+							tmp2 = tmp2.substr(0, new_pos) + to_fill + tmp2.substr(new_pos + to_remplace.size(), tmp2.size());
+						pos = 1;
+						tmp = tmp2;
+					}
+					if (out_file.is_open())
+					{
+						if (pos == 0)
+							out_file << tmp << '\n';
+						else
+							out_file << tmp2 << '\n';
+					}
+					else
+						std::cout << "problem" << std::endl;
+				}
 			}
 			out_file.close();
 		}
 		else
-			std::cout << "File not found" << std::endl;
+			std::cout << "File not found or wrong permission" << std::endl;
 	}
 	else
 	{

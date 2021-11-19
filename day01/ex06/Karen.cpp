@@ -31,6 +31,8 @@ void	Karen::complain(std::string _level)
 			(this->*function[2])();
 		case 3:
 			(this->*function[3])();
+		default :
+			return ;
 	}
 }
 

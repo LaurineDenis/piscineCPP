@@ -6,6 +6,7 @@ int	main(void)
 {
 	std::string	line;
 	Karen		karen;
+
 	while (std::getline(std::cin, line))
 		karen.complain(line);
 }

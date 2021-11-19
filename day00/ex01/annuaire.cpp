@@ -28,7 +28,7 @@ int	remplace_contact(int nb_contact)
 		}
 		else if (line.size() > 0)
 			index = std::stoi(line);
-		if (index > 8 || index <  0)
+		if (index > 8 || index <=  0)
 			std::cout << "INVALID INDEX" << std::endl;
 		else if (index <= nb_contact)
 			break;
@@ -97,7 +97,7 @@ void	search_contact(Contact annuaire[8], int nb_contact)
 		}
 		else if (line.size() > 0)
 			index = std::stoi(line);
-		if (index > 8 || index <  0)
+		if (index > 8 || index <=  0)
 			std::cout << "INVALID INDEX" << std::endl;
 		else if (index <= nb_contact)
 			break;
