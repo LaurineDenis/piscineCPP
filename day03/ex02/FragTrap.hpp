@@ -1,21 +1,23 @@
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include <iostream>
+# include "ClapTrap.hpp"
 
-class ClapTrap
+class FragTrap : public ClapTrap
 {
 	public:
 
-			ClapTrap(void);
-			ClapTrap(std::string name);
-			ClapTrap(ClapTrap const &src);
-			~ClapTrap(void);
+			FragTrap(void);
+			FragTrap(std::string name);
+			FragTrap(FragTrap const &src);
+			~FragTrap(void);
 
-			ClapTrap	operator=(ClapTrap const &src);
+			FragTrap	operator=(FragTrap const &src);
 			void		attack(std::string const &target);
 			void		takeDamage(unsigned int amount);
 			void		beRepaired(unsigned int amount);
+			void		highFivesGuys(void);
 
 	private:
 
