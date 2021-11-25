@@ -29,7 +29,7 @@ ScavTrap::~ScavTrap(void)
 	std::cout << "Destructor ScavTrap called" << std::endl;
 }
 
-ScavTrap	ScavTrap::operator=(ScavTrap const &src)
+ScavTrap	&ScavTrap::operator=(ScavTrap const &src)
 {
 	this->_name = src._name;
 	this->_hit_points = src._hit_points;

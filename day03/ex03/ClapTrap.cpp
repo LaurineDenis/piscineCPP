@@ -21,7 +21,7 @@ ClapTrap::~ClapTrap(void)
 	std::cout << "Destructor ClapTrap called" << std::endl;
 }
 
-ClapTrap	ClapTrap::operator=(ClapTrap const &src)
+ClapTrap	&ClapTrap::operator=(ClapTrap const &src)
 {
 	this->_name = src._name;
 	this->_hit_points = src._hit_points;

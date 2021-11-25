@@ -6,13 +6,18 @@
 int main(void)
 {
 	DiamondTrap	Bob("Bob");
-	ScavTrap	Dylan("Dylan");
-	FragTrap	Marley("Marley");
+	// ScavTrap	Dylan("Dylan");
+	// FragTrap	Marley("Marley");
 
-	Marley.attack("Dylan");
-	Marley.highFivesGuys();
-	Dylan.attack("Bob");
-	Dylan.guardGate();
+	// Marley.attack("Dylan");
+	// Marley.highFivesGuys();
+	// Dylan.attack("Bob");
+	// Dylan.guardGate();
+	Bob.attack("Dylan");
+	Bob.takeDamage(10);
+	Bob.beRepaired(10);
+	Bob.highFivesGuys();
+	Bob.guardGate();
 	Bob.whoAmI();
 	return 0;
 }

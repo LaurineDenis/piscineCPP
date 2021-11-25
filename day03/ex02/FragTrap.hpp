@@ -13,7 +13,7 @@ class FragTrap : public ClapTrap
 			FragTrap(FragTrap const &src);
 			~FragTrap(void);
 
-			FragTrap	operator=(FragTrap const &src);
+			FragTrap	&operator=(FragTrap const &src);
 			void		attack(std::string const &target);
 			void		takeDamage(unsigned int amount);
 			void		beRepaired(unsigned int amount);

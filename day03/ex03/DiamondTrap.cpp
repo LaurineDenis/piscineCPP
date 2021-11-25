@@ -23,7 +23,7 @@ DiamondTrap::~DiamondTrap(void)
 	std::cout << "Destructor DiamondTrap called" << std::endl;
 }
 
-DiamondTrap	DiamondTrap::operator=(DiamondTrap const &src)
+DiamondTrap	&DiamondTrap::operator=(DiamondTrap const &src)
 {
 	this->_name = src._name;
 	return (*this);

@@ -12,8 +12,7 @@ class ClapTrap
 			ClapTrap(ClapTrap const &src);
 			~ClapTrap(void);
 
-			std::string		_name;
-			ClapTrap		operator=(ClapTrap const &src);
+			ClapTrap		&operator=(ClapTrap const &src);
 			void			attack(std::string const &target);
 			void			takeDamage(unsigned int amount);
 			void			beRepaired(unsigned int amount);
@@ -26,6 +25,7 @@ class ClapTrap
 
 	protected:
 
+			std::string		_name;
 			int				_hit_points;
 			int				_energy_points;
 			int				_attack_dammage;

@@ -29,7 +29,7 @@ FragTrap::~FragTrap(void)
 	std::cout << "Destructor FragTrap called" << std::endl;
 }
 
-FragTrap	FragTrap::operator=(FragTrap const &src)
+FragTrap	&FragTrap::operator=(FragTrap const &src)
 {
 	this->_name = src._name;
 	this->_hit_points = src._hit_points;
