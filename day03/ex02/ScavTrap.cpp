@@ -43,18 +43,6 @@ void	ScavTrap::attack(std::string const &target)
 	std::cout << "ScavTrap " << this->_name << " attack " << target << ", causing " << this->_hit_points << " points of damage!" << std::endl;
 }
 
-void	ScavTrap::takeDamage(unsigned int amount)
-{
-	this->_energy_points -= amount;
-	std::cout << "ScavTrap " << this->_name << " take " << amount << " points of damage!" << std::endl;
-}
-
-void	ScavTrap::beRepaired(unsigned int amount)
-{
-	this->_energy_points += amount;
-	std::cout << "ScavTrap " << this->_name << " is repaired with " << amount << " points!" << std::endl;
-}
-
 void	ScavTrap::guardGate(void)
 {
 	std::cout << "ScavTrap " << this->_name << " have enterred in Gate keeper mode" << std::endl;

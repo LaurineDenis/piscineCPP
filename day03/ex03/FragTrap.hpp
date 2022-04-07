@@ -20,6 +20,11 @@ class FragTrap : public virtual ClapTrap
 	private:
 
 			std::string		_name;
+
+	protected:
+			static int hitPointsInit;
+			static int energyPointsInit;
+			static int attackDamageInit;
 };
 
 #endif

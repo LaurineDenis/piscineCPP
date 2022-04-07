@@ -18,7 +18,7 @@ class ClapTrap
 			void			beRepaired(unsigned int amount);
 			void			setHitPoints(int point);
 			void			setEnergyPoints(int point);
-			void			setAttackPoints(int point);
+			void			setAttack_dammage(int point);
 			int				getHitPoints(void);
 			int				getEnergyPoints(void);
 			int				getAttackPoints(void);

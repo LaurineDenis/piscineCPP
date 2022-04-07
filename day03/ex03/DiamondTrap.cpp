@@ -3,12 +3,22 @@
 DiamondTrap::DiamondTrap(void) : ClapTrap(), FragTrap(), ScavTrap()
 {
 	this->_name = "Default";
+	this->_hit_points = FragTrap::hitPointsInit; 
+	this->_energy_points = ScavTrap::energyPointsInit;
+	this->_attack_dammage = FragTrap::attackDamageInit;
+	std::cout << "Energy " << this->_energy_points << " called" << std::endl;
+	std::cout << "Dammage " << this->_attack_dammage << " called" << std::endl;
 	std::cout << "Constructor DiamondTrap by default called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name + "_frag_name"), ScavTrap(name + "_scav_name")
 {
 	this->_name = name;
+	this->_hit_points = FragTrap::hitPointsInit; 
+	this->_energy_points = ScavTrap::energyPointsInit;
+	this->_attack_dammage = FragTrap::attackDamageInit;
+	std::cout << "Energy " << this->_energy_points << " called" << std::endl;
+	std::cout << "Dammage " << this->_attack_dammage << " called" << std::endl;
 	std::cout << "Constructor DiamondTrap " << name << " called" << std::endl;
 }
 

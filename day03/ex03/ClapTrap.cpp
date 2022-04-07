@@ -57,7 +57,7 @@ void	ClapTrap::setEnergyPoints(int point)
 	this->_energy_points = point;
 }
 
-void	ClapTrap::setAttackPoints(int point)
+void	ClapTrap::setAttack_dammage(int point)
 {
 	this->_attack_dammage = point;
 }
