@@ -18,6 +18,18 @@ int main(void)
 	std::cout << "deuxieme chat"<<std::endl;
     Cat cat_2(cat_1);
 
+    //const Animal* k = new Animal();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+    std::cout << "Type : " << j->getType() << std::endl;
+    j->makeSound();
+    std::cout << "Type : " << i->getType() << std::endl;
+    i->makeSound();
+    // std::cout << "Type : " << k->getType() << std::endl;
+    // k->makeSound();
+    delete j;
+    delete i;
+
    return 0;
 
 }

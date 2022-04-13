@@ -12,9 +12,9 @@ class WrongAnimal
 			WrongAnimal(WrongAnimal const &src);
 			~WrongAnimal(void);
 
-			WrongAnimal			&operator=(WrongAnimal const &src);
+			WrongAnimal		&operator=(WrongAnimal const &src);
 			std::string		getType(void) const;
-			void	makeSound() const;
+			void			makeSound() const;
 
 	protected:
 			std::string		type;

@@ -33,8 +33,3 @@ std::string	Animal::getType(void) const
 {
 	return this->type;
 }
- 
-void		Animal::makeSound() const
-{
-	std::cout << "Souuuuuuund"<< std::endl;
-}
