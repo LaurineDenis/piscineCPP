@@ -14,10 +14,11 @@ Form::Form(std::string name, int gradeToSign, int gradeToExec) :  _name(name), _
 	// std::cout << "Constructor Form " << _name << " called at the grade :" << grade << std::endl;
 }
 
-Form::Form(Form const &src)
+Form::Form(Form const &src): _name(src._name), _gradeToSign(src._gradeToSign), _gradeToExec(src._gradeToExec)
 {
 	// std::cout << "Constructor Form by copy called" << std::endl;
-	*this = src;
+	if (this != &src)
+        *this = src;
 }
 
 Form::~Form(void)
@@ -27,12 +28,6 @@ Form::~Form(void)
 
 Form	&Form::operator=(Form const &src)
 {
-    if (this->_name != src._name)
-    	this->_name = src._name;
-    if (this->_gradeToSign != src._gradeToSign)
-        this->_gradeToSign = src._gradeToSign;
-    if (this->_gradeToExec != src._gradeToExec)
-        this->_gradeToExec = src._gradeToExec;
     if (this->_isSigned != src._isSigned)
         this->_isSigned = src._isSigned;
 	return (*this);

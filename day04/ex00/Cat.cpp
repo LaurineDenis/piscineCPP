@@ -5,11 +5,6 @@ Cat::Cat(void) : Animal("Cat")
 	std::cout << "Constructor Cat by default called" << std::endl;
 }
 
-Cat::Cat(std::string type) : Animal(type)
-{
-	std::cout << "Constructor Cat called" << std::endl;
-}
-
 Cat::Cat(Cat const &src)
 {
 	std::cout << "Constructor Cat by copy called" << std::endl;

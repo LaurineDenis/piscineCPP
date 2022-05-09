@@ -17,15 +17,15 @@ class Span
 
 			Span		    &operator=(Span const &src);
             void            addNumber(unsigned const n);
+			void			addNumber(std::vector<int>::iterator firstNumber, std::vector<int>::iterator lastNumber);
             unsigned int    shortestSpan();
             unsigned int    longestSpan();
             
-            class Limits :  public std::exception 
-            {
-                virtual const char *what() const throw ()
-                {
-                    return ("No span to find.");
-                }
+            class			Limits :  public std::exception {
+                virtual const char *what() const throw ();
+            };
+			class			NoSpace :  public std::exception {
+                virtual const char *what() const throw ();
             };
 
 	private :

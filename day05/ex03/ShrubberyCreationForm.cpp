@@ -14,7 +14,8 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("Shrubbe
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &src)
 {
 	// std::cout << "Constructor ShrubberyCreationForm by copy called" << std::endl;
-	*this = src;
+	if (this != &src)
+        *this = src;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(void)

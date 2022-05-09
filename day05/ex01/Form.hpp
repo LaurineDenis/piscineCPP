@@ -12,7 +12,7 @@ class Form
 	public:
 
 			Form(void);
-			Form(std::string name, int gradeToSign, int gradeToExec);
+			Form(std::string const name, int const gradeToSign, int const gradeToExec);
 			Form(Form const &src);
 			~Form(void);
 
@@ -32,10 +32,10 @@ class Form
 
 	private:
 
-			std::string		_name;
-		    bool 	    	_isSigned;
-            int             _gradeToSign;
-            int             _gradeToExec;
+			std::string const	_name;
+			bool				_isSigned;
+			int	const			_gradeToSign;
+			int	const			_gradeToExec;
 };
 
 std::ostream &operator<<(std::ostream &o, Form const &n);

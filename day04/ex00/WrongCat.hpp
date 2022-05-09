@@ -8,7 +8,6 @@ class WrongCat : public WrongAnimal
 	public:
 
 			WrongCat(void);
-			WrongCat(std::string type);
 			WrongCat(WrongCat const &src);
 			~WrongCat(void);
 

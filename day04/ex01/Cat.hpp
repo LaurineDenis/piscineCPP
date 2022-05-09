@@ -15,10 +15,12 @@ class Cat : public Animal
 
 			Cat		&operator=(Cat const &src);
 			void	makeSound() const;
+			Brain	*getBrain(void) const;
 
 	private:
 			std::string		type;
 			Brain*			_brain;
 };
+
 
 #endif

@@ -15,10 +15,11 @@ class Dog : public Animal
 
 			Dog		&operator=(Dog const &src);
 			void	makeSound() const;
+			Brain	*getBrain(void) const;
 
 	private:
 			std::string		type;
-			Brain*			brain;
+			Brain*			_brain;
 };
 
 #endif

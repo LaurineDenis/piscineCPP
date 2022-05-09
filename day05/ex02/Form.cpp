@@ -5,7 +5,7 @@ Form::Form(void) : _name("Default"), _isSigned(false), _gradeToSign(1), _gradeTo
 	// std::cout << "Constructor Form by default called" << std::endl;
 }
 
-Form::Form(std::string name, int gradeToSign, int gradeToExec) :  _name(name), _gradeToSign(gradeToSign), _gradeToExec(gradeToExec)
+Form::Form(std::string const name, int const gradeToSign, int const gradeToExec) :  _name(name), _gradeToSign(gradeToSign), _gradeToExec(gradeToExec)
 {
     if (this->_gradeToExec < 1 || this->_gradeToSign < 1)
         throw Form::GradeTooHighException();
@@ -14,10 +14,11 @@ Form::Form(std::string name, int gradeToSign, int gradeToExec) :  _name(name), _
 	// std::cout << "Constructor Form " << _name << " called at the grade :" << grade << std::endl;
 }
 
-Form::Form(Form const &src)
+Form::Form(Form const &src): _name(src._name), _gradeToSign(src._gradeToSign), _gradeToExec(src._gradeToExec)
 {
 	// std::cout << "Constructor Form by copy called" << std::endl;
-	*this = src;
+	if (this != &src)
+        *this = src;
 }
 
 Form::~Form(void)
@@ -27,12 +28,6 @@ Form::~Form(void)
 
 Form	&Form::operator=(Form const &src)
 {
-    if (this->_name != src._name)
-    	this->_name = src._name;
-    if (this->_gradeToSign != src._gradeToSign)
-        this->_gradeToSign = src._gradeToSign;
-    if (this->_gradeToExec != src._gradeToExec)
-        this->_gradeToExec = src._gradeToExec;
     if (this->_isSigned != src._isSigned)
         this->_isSigned = src._isSigned;
 	return (*this);
@@ -79,6 +74,7 @@ void         Form::beSigned(Bureaucrat &bubu)
     if (bubu.getGrade() <= this->_gradeToSign)
     {
         this->_isSigned = true;
+		std::cout << this->_name << " is signed."<< std::endl;
         bubu.signForm(*this);
     }
     else

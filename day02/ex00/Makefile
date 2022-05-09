@@ -48,14 +48,14 @@ $(NAME):		${OBJ} ${HEADER}
 clean:
 				@${RM} ${OBJ_PATH}
 				@echo ""
-				@echo "\t\t$(ORANGE)[Delete objs minishell done]"
+				@echo "\t\t$(ORANGE)[Delete objs piscineCPP done]"
 				@echo ""
 
 fclean:
 				@${RM} ${OBJ_PATH}
 				@${RM} ${NAME}
 				@echo ""
-				@echo "\t\t$(ORANGE)[Delete objs minishell done]"
+				@echo "\t\t$(ORANGE)[Delete objs piscineCPP done]"
 				@echo ""
 
 re:				fclean all

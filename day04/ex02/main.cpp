@@ -15,21 +15,24 @@ int main(void)
         delete animal[i];
 
     Cat cat_1;
-	std::cout << "deuxieme chat"<<std::endl;
+	std::cout << "\ndeuxieme Cat par copy\n"<<std::endl;
     Cat cat_2(cat_1);
+	std::cout << "\n---------------------"<<std::endl;
+	Dog	a;
+	Dog b;
+	std::cout << "\nAssignation Dog"<<std::endl;
+	b = a;
 
-    //const Animal* k = new Animal();
+	std::cout << "\n---------------------"<<std::endl;
     const Animal* j = new Dog();
     const Animal* i = new Cat();
-    std::cout << "Type : " << j->getType() << std::endl;
+   
+    std::cout << j->getType() << " " << std::endl;
+    std::cout << i->getType() << " " << std::endl;
+    i->makeSound(); // will output the cat sound!
     j->makeSound();
-    std::cout << "Type : " << i->getType() << std::endl;
-    i->makeSound();
-    // std::cout << "Type : " << k->getType() << std::endl;
-    // k->makeSound();
-    delete j;
-    delete i;
+	// TEST ANIMAL DONT WORK
+	// Animal	test;
 
    return 0;
-
 }

@@ -16,6 +16,9 @@ class Intern
 
 			Intern	        &operator=(Intern const &src);
             Form            *makeForm(std::string form, std::string target);
+			Form*			_newRobotomyRequestForm(std::string target);
+			Form*			_newPresidentialPardonForm(std::string target);
+			Form*			_newShrubberyCreationForm(std::string target);
 };
 
 #endif

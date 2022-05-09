@@ -40,6 +40,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout <<"------------------------------------------"<< std::endl;
 	std::cout << "LES BONS GRADES POUR SIGNER MAIS PAS EXECUTION"<< std::endl;
 	try
 	{
@@ -89,6 +90,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout <<"------------------------------------------"<< std::endl;
 	std::cout << "LES MAUVAIS GRADES POUR SIGNER DONC PAS EXECUTION"<< std::endl;
 	try
 	{

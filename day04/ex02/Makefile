@@ -11,7 +11,7 @@ GREY = \033[3;90m
 ORANGE = \033[3;91m
 YELLOW = \033[0;33m
 
-NAME		= Brain
+NAME		= ClasseAbstraite
 
 SRCS		= Dog.cpp Cat.cpp Animal.cpp main.cpp Brain.cpp
 
@@ -48,14 +48,14 @@ $(NAME):		${OBJ} ${HEADER}
 clean:
 				@${RM} ${OBJ_PATH}
 				@echo ""
-				@echo "\t\t$(ORANGE)[Delete objs minishell done]"
+				@echo "\t\t$(ORANGE)[Delete objs Piscine CPP done]"
 				@echo ""
 
 fclean:
 				@${RM} ${OBJ_PATH}
 				@${RM} ${NAME}
 				@echo ""
-				@echo "\t\t$(ORANGE)[Delete objs minishell done]"
+				@echo "\t\t$(ORANGE)[Delete objs Piscine CPP done]"
 				@echo ""
 
 re:				fclean all

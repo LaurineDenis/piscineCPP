@@ -13,7 +13,8 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("Presi
 PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &src)
 {
 	// std::cout << "Constructor PresidentialPardonForm by copy called" << std::endl;
-	*this = src;
+	if (this != &src)
+        *this = src;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(void)

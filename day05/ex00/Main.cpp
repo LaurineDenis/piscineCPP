@@ -14,7 +14,7 @@ int main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout <<"------------------------------------------"<< std::endl;
+	std::cout <<"-----------------Decrement to low-------------------------"<< std::endl;
 	try
 	{
 		Bureaucrat	bubu("jab", 150);
@@ -28,11 +28,10 @@ int main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout <<"------------------------------------------"<< std::endl;
+	std::cout <<"------------------Creation to low------------------------"<< std::endl;
 	try
 	{
 		Bureaucrat	bubu("jabl", 151);
-
 	}
 	catch (std::exception const& e)
 	{

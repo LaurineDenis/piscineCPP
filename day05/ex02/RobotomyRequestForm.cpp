@@ -14,7 +14,8 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("RobotomyReq
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &src)
 {
 	// std::cout << "Constructor RobotomyRequestForm by copy called" << std::endl;
-	*this = src;
+	if (this != &src)
+        *this = src;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(void)

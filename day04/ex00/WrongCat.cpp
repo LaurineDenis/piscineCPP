@@ -5,11 +5,6 @@ WrongCat::WrongCat(void) : WrongAnimal("WrongCat")
 	std::cout << "Constructor WrongCat by default called" << std::endl;
 }
 
-WrongCat::WrongCat(std::string type) : WrongAnimal(type)
-{
-	std::cout << "Constructor WrongCat called" << std::endl;
-}
-
 WrongCat::WrongCat(WrongCat const &src)
 {
 	std::cout << "Constructor WrongCat by copy called" << std::endl;

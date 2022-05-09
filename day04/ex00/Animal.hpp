@@ -10,7 +10,7 @@ class Animal
 			Animal(void);
 			Animal(std::string type);
 			Animal(Animal const &src);
-			~Animal(void);
+			virtual ~Animal(void);
 
 			Animal			&operator=(Animal const &src);
 			std::string		getType(void) const;

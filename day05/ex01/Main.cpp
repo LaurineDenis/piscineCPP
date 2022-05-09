@@ -40,28 +40,5 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	// try
-	// {
-	// 	Bureaucrat	bubu("jab", 150);
-	// 	bubu.increment(6);
-	// 	std::cout << bubu << std::endl;
-	// 	bubu.decrement(16);
-	// }
-	// catch (std::exception const& e)
-	// {
-	// 	std::cerr << e.what() << std::endl;
-	// }
-	// try
-	// {
-	// 	Bureaucrat	bubu("jabl", 151);
-
-	// }
-	// catch (std::exception const& e)
-	// {
-	// 	std::cerr << e.what() << std::endl;
-	// }
-
-
-	
 	return 0;
 }

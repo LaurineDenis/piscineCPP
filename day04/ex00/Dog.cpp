@@ -5,11 +5,6 @@ Dog::Dog(void) : Animal("Dog")
 	std::cout << "Constructor Dog by default called" << std::endl;
 }
 
-Dog::Dog(std::string type) : Animal(type)
-{
-	std::cout << "Constructor Dog called" << std::endl;
-}
-
 Dog::Dog(Dog const &src)
 {
 	std::cout << "Constructor Dog by copy called" << std::endl;

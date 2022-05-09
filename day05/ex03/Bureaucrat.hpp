@@ -12,7 +12,7 @@ class Bureaucrat
 	public:
 
 			Bureaucrat(void);
-			Bureaucrat(std::string name, int grade);
+			Bureaucrat(std::string const name, int grade);
 			Bureaucrat(Bureaucrat const &src);
 			~Bureaucrat(void);
 
@@ -34,7 +34,7 @@ class Bureaucrat
 
 	private:
 
-			std::string		_name;
+			std::string	const	_name;
 		    int 	    	_grade;
 };
 

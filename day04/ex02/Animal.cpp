@@ -13,7 +13,8 @@ Animal::Animal(std::string type) : type(type)
 Animal::Animal(Animal const &src)
 {
 	std::cout << "Copy Constructor Animal by copy called" << std::endl;
-	*this = src;
+	if (&src != this)
+		*this = src;
 }
 
 Animal::~Animal(void)
@@ -32,4 +33,9 @@ Animal		&Animal::operator=(Animal const &src)
 std::string	Animal::getType(void) const
 {
 	return this->type;
+}
+ 
+void		Animal::makeSound() const
+{
+	std::cout << "Souuuuuuund"<< std::endl;
 }

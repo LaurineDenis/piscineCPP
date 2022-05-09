@@ -20,5 +20,6 @@ int main(void)
 	std::cout << Wcat->getType() << " " << std::endl;
 	Wcat->makeSound();
 	Wmeta->makeSound();
+	delete cat;
 	return 0;
 }

@@ -5,7 +5,7 @@ Bureaucrat::Bureaucrat(void) : _name("Default"), _grade(150)
 	// std::cout << "Constructor Bureaucrat by default called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade) :  _name(name), _grade(grade)
+Bureaucrat::Bureaucrat(std::string const name, int grade) :  _name(name), _grade(grade)
 {
     if (this->_grade < 1)
         throw Bureaucrat::GradeTooHighException();
@@ -17,7 +17,8 @@ Bureaucrat::Bureaucrat(std::string name, int grade) :  _name(name), _grade(grade
 Bureaucrat::Bureaucrat(Bureaucrat const &src)
 {
 	// std::cout << "Constructor Bureaucrat by copy called" << std::endl;
-	*this = src;
+	if (this != &src)
+        *this = src;
 }
 
 Bureaucrat::~Bureaucrat(void)
@@ -27,8 +28,6 @@ Bureaucrat::~Bureaucrat(void)
 
 Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &src)
 {
-    if (this->_name != src._name)
-    	this->_name = src._name;
     if (this->_grade != src._grade)
         this->_grade = src._grade;
 	return (*this);
@@ -84,16 +83,16 @@ void        Bureaucrat::signForm(Form &form)
     if (form.getIsSigned() == true)
         std::cout << this->_name << " signed " << form.getName() << std::endl;
     else
-        std::cout << this->_name << " couldn’t sign " << form.getName() << " because his grade dont allow."<< std::endl;
+        std::cout << this->_name << " couldnt sign " << form.getName() << " because his grade dont allow."<< std::endl;
 }
 
 void        Bureaucrat::executeForm(Form const & form)
 {
     if (form.getIsSigned() == false)
-        std::cout << this->_name << " couldn’t execute " << form.getName() << " because the form isn't signed." << std::endl;
+        std::cout << this->_name << " couldnt execute " << form.getName() << " because the form isn't signed." << std::endl;
     else if (form.getIsSigned() == true && this->_grade <= form.getGradeToExec())
         std::cout << this->_name << " executed " << form.getName() << std::endl;
     else
-        std::cout << this->_name << " couldn’t execute " << form.getName() << " because his grade dont allow."<< std::endl;
+        std::cout << this->_name << " couldnt execute " << form.getName() << " because his grade dont allow."<< std::endl;
     form.execute(*this);
 }
